@@ -22,9 +22,7 @@ $(document).ready(function() {
 
         //Ordena los eventos segun la fecha (los mas recientes primero)
         proximos = proximos.sort(function(x, y) {
-            if (x.fecha < y.fecha) {
-                return 1;
-            }
+            if (x.fecha < y.fecha) return 1;
             return -1;
         });
 

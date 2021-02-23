@@ -1,7 +1,6 @@
-//Define las variables que necesites
-var pasados = [];
-var hoy;
-var eventos;
+//Define las letiables que necesites
+let pasados = [],
+    hoy, eventos;
 
 $(document).ready(function() {
     //Carga los datos que estan en el JSON (info.json) usando AJAX
@@ -9,12 +8,12 @@ $(document).ready(function() {
         url: "info.json"
     }).done(function(resultado) {
 
-        //Guarda el resultado en variables
+        //Guarda el resultado en letiables
         hoy = resultado.fechaActual;
         eventos = resultado.eventos;
 
         //Selecciona los eventos que sean anteriores a la fecha actual del JSON
-        for (var i = 0; i < eventos.length; i++) {
+        for (let i = 0; i < eventos.length; i++) {
             if (eventos[i].fecha < hoy) {
                 pasados.push(eventos[i]);
             }
@@ -22,17 +21,15 @@ $(document).ready(function() {
 
         //Ordena los eventos segun la fecha (los mas recientes primero)
         pasados = pasados.sort(function(x, y) {
-            if (x.fecha < y.fecha) {
-                return 1;
-            }
+            if (x.fecha < y.fecha) return 1;
             return -1;
         });
 
         //Crea un string que contenga el HTML que describe el detalle del evento
-        var html = ""
+        let html = ""
 
         //Recorre el arreglo y concatena el HTML para cada evento
-        for (var j = 0; j < pasados.length; j++) {
+        for (let j = 0; j < pasados.length; j++) {
             html += `
             <div class="col-md-6">
               <div class="card flex-md-row mb-4 h-md-250">

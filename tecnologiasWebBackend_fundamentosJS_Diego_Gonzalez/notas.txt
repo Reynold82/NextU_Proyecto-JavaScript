@@ -1,0 +1,8 @@
+Funcion para obtener aleatoriamente un elemento de un array
+
+let actividad = pasados;
+
+        function eventoAleatorio(actividad) {
+            return actividad[Math.floor(Math.random() * actividad.length)];
+        }
+        console.log(eventoAleatorio(actividad));

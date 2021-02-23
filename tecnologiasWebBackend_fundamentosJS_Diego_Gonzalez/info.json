@@ -65,10 +65,10 @@
         },
         {
             "id": 8,
-            "nombre": "Vamos al Cine",
+            "nombre": "Vamos al Parque",
             "fecha": "2022-10-15",
-            "descripcion": "Veremos la película más interesante",
-            "lugar": "Salón D1",
+            "descripcion": "Picnic al aire libre",
+            "lugar": "Plaza San Martin",
             "invitados": 3,
             "precio": 8
         }
